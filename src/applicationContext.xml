@@ -28,7 +28,7 @@
 	 
 	<!-- 页面跳转的方式，进行页面展示： MVC设计模式的实现 -->
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">  
-	    <property name="prefix" value="/WEB-INF/views/" />  
+	    <property name="prefix" value="jsps/" />  
 	    <property name="suffix" value=".jsp" />  
 	</bean>
     

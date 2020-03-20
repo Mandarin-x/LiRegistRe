@@ -4,11 +4,21 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 
 <!DOCTYPE html>
+
+<%
+    String path = request.getContextPath();
+    String basePath = request.getScheme() + "://"
+            + request.getServerName() + ":" + request.getServerPort()
+            + path + "/";
+%>
+<base href="<%=basePath%>"></base>
+
+
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <title>Add New Reader</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
         <script>
             function checkPhone(){
                 var account = form1.Account.value;

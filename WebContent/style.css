@@ -1,0 +1,91 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: white;
+
+}
+
+.heading{
+    background-color:#4A05B1;
+    width: 100%;
+    height: 103px;
+    margin: 0px auto;
+}
+.heading_nav{
+    width: 100%;
+    height: 30px;
+
+
+}
+.heading_logo{
+    float: left;
+    width: 240px;
+    height:103px;
+    /*background-color: black;*/
+}
+.heading_navbar{/*通过width和right改位置*/
+    /*background-color: black;*/
+    width: 500px;
+    margin-top: 80px;
+    position: absolute;
+    right: 53px;
+
+
+}
+ul{
+    /*background-color: black;*/
+    list-style-type: none;
+    width: 378px;
+    float: right;
+}
+li{
+    padding-left: 5px;
+    display: inline;
+}
+a:link,a:visited{
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    padding: 6px;
+    text-decoration: none;
+}
+a:active,a:hover{
+    font-weight: bold;
+    color: #ebeef0;
+    text-align: center;
+
+}
+.heading_Sign_out{
+    position: absolute;
+    right: 0px;
+}
+.table_heading{
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    padding-top: 50px;
+}
+table{
+    margin: auto auto;
+}
+.body{
+    background-color: white;
+    width: 80%;
+    height: 1000px;
+    margin:50px auto;
+    border-style: groove;
+    border-width: 1px;
+    border-color: #fff9ea;
+
+}
+.footing{
+    background-color: white;
+    border-style: groove;
+    border-width: 1px;
+    border-color: #fff9ea;
+    height:100px;
+    width: 100%;
+
+}

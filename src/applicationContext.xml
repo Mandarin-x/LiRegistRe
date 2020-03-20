@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- xml schema,XSD文件 -->
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://www.springframework.org/schema/beans"
+  xmlns:aop="http://www.springframework.org/schema/aop"
+  xmlns:context="http://www.springframework.org/schema/context" 
+  xmlns:tx="http://www.springframework.org/schema/tx"
+  xmlns:util="http://www.springframework.org/schema/util"
+  xmlns:mvc="http://www.springframework.org/schema/mvc"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans 
+     http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+     http://www.springframework.org/schema/aop
+     http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+     http://www.springframework.org/schema/context
+     http://www.springframework.org/schema/context/spring-context-4.0.xsd
+     http://www.springframework.org/schema/tx
+     http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+     http://www.springframework.org/schema/util
+     http://www.springframework.org/schema/tx/spring-util-4.0.xsd
+     http://www.springframework.org/schema/mvc    
+  	 http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd ">
+    
+    <!-- 扫码所有加了Spring注解的类，然后加载进context -->
+	<context:component-scan base-package="com.servlet" />  
+	<bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping" />  
+	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" />  
+	 
+	<!-- 页面跳转的方式，进行页面展示： MVC设计模式的实现 -->
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">  
+	    <property name="prefix" value="/WEB-INF/views/" />  
+	    <property name="suffix" value=".jsp" />  
+	</bean>
+    
+    
+</beans>

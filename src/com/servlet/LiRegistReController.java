@@ -34,7 +34,7 @@ public class LiRegistReController {
 		UserService li = new UserServiceImpl();
 		int ifRegistSuc = li.registReAndDeposit(re_id, re_email);//ifRegistSuc 表示是否注册成功以及输入信息是否有错
 		
-		System.out.println(ifRegistSuc);
+		System.out.println("是否注册成功： " + ifRegistSuc + "  (0表示注册失败 该账号id或Email已存在；1表示注册成功；-1表示信息有误)");
 		
 		mv.addObject("ifRegistSuc", ifRegistSuc);//将该ifRegistSuc值传给前端
 		

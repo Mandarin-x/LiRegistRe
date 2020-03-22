@@ -30,6 +30,12 @@
         </script>
     </head>
     <body>
+    	<div class="heading"><!--页眉内容-->
+            <div class="heading_nav"><!--这里是导航栏内容,要加啥功能模块往这里放-->
+                <div class="heading_logo"><img src="images/logo.png" height="153" width="279"/></div><!-- 图片位置-->
+                <div class="heading_Sign_out"><a href="#">LOG OUT</a></div>
+            </div>
+        </div>
         <div class="title">
             <h3>Add New Reader</h3>
         </div>
@@ -43,16 +49,27 @@
             </form>
         </div>
 
-		ifRegistSuc = ${ifRegistSuc} <br/>
-		
+
 		<c:choose>
 		
 			<c:when test="${ifRegistSuc==0}">
-				<span>=======(弹出窗口或跳转页面)提示 ：  未注册成功，该用户的id或Email已被注册过=======</span>
+				<!-- =======(弹出窗口或跳转页面)提示 ：  未注册成功，该用户的id或Email已被注册过======= -->
+				<script>
+					function Fail() {
+				        alert("Registration Failed. The reader's id or email has already existed!")
+				    }
+				    Fail();
+				</script>
 			</c:when>
 		
 			<c:when test="${ifRegistSuc==1}">
-				<span>=======(弹出窗口或跳转页面)提示 ：  该读者账户创建成功=======</span>
+				<!-- =======(弹出窗口或跳转页面)提示 ：  该读者账户创建成功======= -->
+				<script>
+					function Success() {
+				        alert("Registration Successful!")
+				    }
+				    Success();
+				</script>
 			</c:when>
 			
 			<c:otherwise></c:otherwise>
